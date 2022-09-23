@@ -1,0 +1,1346 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--libraFonts);
+}
+
+:root{
+    --coklat : #57433c;
+    --cream : #bb9076;
+    --creamTebal : #e5cdaa;
+    --putih : #fff;
+    --hitam : #000;
+
+    --dancingFonts : 'Dancing Script', cursive;
+    --libraFonts :'Libre Franklin', sans-serif;
+}
+
+body.changeToDark{
+    --coklat : #e5cdaa;
+    --cream : #fff;
+    --creamTebal : #fff;
+    --putih : #bb9076;
+    --hitam : #57433c;
+}
+
+
+/* notification started */
+.floating{
+    position: fixed;
+    display: none;
+    transition: 1s ease all;
+    z-index: 99;
+    right: 40px;
+    margin-top: 80px;
+    width: 400px;
+    overflow: scroll;
+    height: 500px;
+}
+
+.floating.active{
+   display: block;
+    transform: translate(0,0);
+}
+
+.floating img{
+    float: left;
+}
+
+.floating .notification{
+    background-color: var(--cream);
+    padding: 10px;
+    border-top: 3px solid var(--coklat);
+}
+
+.floating p{
+    color: var(--coklat);
+}
+
+.floating h5{
+    font-size: 1.5em;
+    color: var(--coklat);
+    font-weight: bold;
+}
+
+.floating .harga{
+    background-color: var(--coklat);
+    color: var(--cream);
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: 1px solid var(--coklat);
+    transition: 1s ease all;
+    cursor: pointer;
+}
+
+.floating .harga:hover{
+    color: var(--coklat);
+    background-color: transparent;
+}
+
+.floating hr{
+    color: var(--coklat);
+    height: 2px;
+}
+
+.floating .gambar{
+    position: relative;
+}
+
+.floating .new{
+    top: 10px;
+    left: 10px;
+    font-weight: bold;
+    background-color: var(--cream);
+    padding: 5px 10px;
+    border-radius: 6px;
+    position: absolute;
+}
+/* notification finsihed */
+
+/* navbar styling */
+
+.navbar{
+    transition: 1s ease all;
+}
+
+.bi-bell-fill{
+    color: var(--hitam);
+}
+
+.bi-moon-fill{
+    color: var(--hitam);
+    transition: 1s ease all;
+}
+
+
+.navbar .navbar-brand{
+    color: var(--putih);
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 0px 2px 3px rgba(0,0,0,.2);
+    transition: 1s ease all;
+}
+
+.navbar.changeColor{
+    background-color: var(--coklat);
+    border-bottom: 1px solid var(--cream);
+}
+
+.navbar .navbar-brand:hover{
+    color: var(--cream);
+}
+
+.navbar .active{
+    color: var(--putih);
+    background-color: var(--cream);
+    border-radius: 6px;
+}
+
+.navbar ul li a{
+    color: var(--putih);
+    font-weight: 100;
+    cursor: pointer;
+}
+
+/* NAVBAR STYLING FINSIH */
+
+/* HOME STYLING */
+
+/* header started */
+header .row{
+    height: 100vh;
+}
+
+header{
+    background-image: url('/images/bg.png');
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header .row {
+    text-align: center;
+}
+
+header .row h1{
+    color: var(--putih);
+    font-family: var(--dancingFonts);
+    font-weight: bold;
+    font-size: 100px;
+}
+
+header .row h5{
+    color: var(--putih);
+    background-color: var(--cream);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 8px 20px;
+    border-radius: 6px;
+}
+
+header .row p{
+    margin: 30px;
+    color: var(--putih);
+    line-height: 40px;
+    font-weight: 100;
+}
+
+/* header finished */
+
+/* intro started */
+.intro{
+    background-color: var(--cream);
+    padding: 50px 0;
+    position: relative;
+}
+
+.intro::after{
+    width: 5%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--coklat);
+    display: block;
+    content: '';
+    z-index: 9;
+    border-left: 1px solid var(--creamTebal);
+}
+
+.intro .row{
+    align-items: center;
+}
+
+.intro img{
+    width: 100%;
+    border-left: 3px solid var(--creamTebal);
+    border-bottom: 3px solid var(--creamTebal);
+    z-index: 99;
+    position: relative;
+    border-radius: 6px;
+}
+
+.intro h1{
+  font-weight: bold;
+  color: var(--coklat);
+}
+
+.intro .kanan{
+    position: relative;
+    z-index: 99;
+}
+
+.intro p{
+    font-weight: 200;
+    color: var(--hitam);
+}
+
+.intro strong{
+    background-color: var(--creamTebal);
+    padding: 5px 10px;
+    margin: 10px 0;
+    font-family: var(--dancingFonts);
+    display: block;
+    width: fit-content;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 6px;
+    color: var(--coklat);
+    font-weight: 200;
+}
+
+.intro a{
+    text-decoration: none;
+    color: var(--cream);
+    background-color: var(--coklat);
+    padding: 13px 36px;
+    border-radius: 6px;
+    display: block;
+    width: fit-content;
+    margin: 10px 0;
+    font-weight: bold;
+    border: 1px solid var(--coklat);
+    transition: 1s ease all;
+    cursor: pointer;
+}
+
+.intro a:hover{
+    background-color: transparent;
+    color: var(--coklat);
+}
+/* intro finsihed */
+
+/* produkterbaru started */
+
+.produkTerbaru{
+    background-color: var(--coklat);
+    padding: 50px;
+    text-align: center;
+    position: relative;
+}
+
+.produkTerbaru .card{
+    background-color: var(--cream);
+    top: 0;
+    position: relative;
+    transition: top ease 1s;
+    margin-top: 30px;
+}
+
+.produkTerbaru .card:hover{
+    top: -50px;
+}
+.produkTerbaru h1{
+    color: var(--putih);
+    font-family: var(--dancingFonts);
+    font-size: 70px;
+}
+
+.produkTerbaru strong{
+    background-color: var(--creamTebal);
+    padding: 5px 10px;
+    margin: 10px auto;
+    font-family: var(--dancingFonts);
+    display: block;
+    width: fit-content;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 6px;
+    color: var(--coklat);
+    font-weight: 200;
+}
+
+.produkTerbaru h5{
+    color: var(--coklat);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+.produkTerbaru p{
+    font-weight: 200;
+    color: var(--hitam);
+}
+
+.produkTerbaru .atas{
+    margin: 20px auto;
+    color: var(--putih);
+    font-weight: 200;
+    width: 50%;
+}
+
+.produkTerbaru .btn{
+    background-color: var(--coklat);
+    border: none;
+    outline: none;
+    color: var(--creamTebal);
+    border: 1px solid var(--coklat);
+    transition: 1s ease all;
+    font-weight: bold;
+}
+.produkTerbaru .btn:hover{
+    background-color: transparent;
+}
+
+/* produkterbaru Finished */
+
+/* diskon started */
+#diskon::after{
+    width: 5%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--coklat);
+    display: block;
+    content: '';
+    z-index: 9;
+    border-right: 1px solid var(--creamTebal);
+    border-left: none;
+}
+
+#diskon img{
+    width: 100%;
+    border-left: none;
+    border-right: 3px solid var(--creamTebal);
+    border-bottom: 3px solid var(--creamTebal);
+    z-index: 99;
+    position: relative;
+    border-radius: 6px;
+}
+
+#diskon .img{
+    position: relative;
+}
+
+#diskon .promo{
+    position: absolute;
+    z-index: 999;
+    background-color: var(--cream);
+    color: var(--putih);
+    top: 10px;
+    left: 30px;
+    padding: 6px 13px;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 2px 3px rgba(0,0,0,.2);
+}
+/* diskon finished */
+
+/* all menu started */
+
+.allMenu{
+    background-color: var(--coklat);
+    padding: 50px;
+    text-align: center;
+     position: relative;
+}
+
+.allMenu .title{
+    text-align: center;
+}
+
+.allMenu .card{
+    background-color: var(--cream);
+    top: 0;
+    position: relative;
+    transition: top ease 1s;
+    margin-top: 30px;
+}
+
+.allMenu .card:hover{
+    top: -50px;
+}
+.allMenu h1{
+    color: var(--putih);
+    font-family: var(--dancingFonts);
+    font-size: 70px;
+}
+
+.allMenu strong{
+    background-color: var(--creamTebal);
+    padding: 5px 10px;
+    margin: 10px auto;
+    font-family: var(--dancingFonts);
+    display: block;
+    width: fit-content;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 6px;
+    color: var(--coklat);
+    font-weight: 200;
+}
+
+.allMenu h5{
+    color: var(--coklat);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.allMenu .allMenuTitle{
+    color: var(--putih);
+    margin-top: 20px;
+}
+
+.allMenu p{
+    font-weight: 200;
+    color: var(--hitam);
+}
+
+.allMenu .atas{
+    margin: 20px auto;
+    color: var(--putih);
+    font-weight: 200;
+    width: 50%;
+}
+
+.allMenu hr{
+    color: var(--putih);
+}
+
+.allMenu .btn{
+    background-color: var(--coklat);
+    border: none;
+    outline: none;
+    color: var(--creamTebal);
+    border: 1px solid var(--coklat);
+    transition: 1s ease all;
+    font-weight: bold;
+}
+.allMenu .btn:hover{
+    background-color: transparent;
+}
+
+.allMenu .swiper-slide{
+    background-color: var(--cream);
+    color: var(--putih);
+    width: 100%;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+
+.allMenu .btn-input{
+    background-color: var(--cream);
+    outline: none;
+    border: none;
+    color: var(--putih);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.allMenu .menu h4{
+    color: var(--putih);
+    margin-top: 30px;
+}
+
+.allMenu .aktif{
+    color: var(--coklat);
+    font-weight: bold;
+}
+
+.allMenu .card{
+    position: relative;
+}
+
+.produkCatagori{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 99;
+}
+
+.produkCatagori p{
+    background-color: var(--cream);
+    padding: 7px 13px;
+    color: var(--coklat);
+    box-shadow: 0px 3px 4px var(--coklat);
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* all menu finished */
+
+/* people Say Started */
+.peopleSay{
+    background-color: var(--cream);
+    padding: 50px;
+    color: var(--putih);
+}
+
+.peopleSay .title h2{
+    text-align: center;
+    font-weight: bold;
+    font-family: var(--dancingFonts);
+    font-size: 50px;
+    color: var(--coklat);
+}
+
+.peopleSay h5{
+    font-weight: bold;
+}
+
+.peopleSay p{
+    font-weight: 100;
+}
+
+.peopleSay .card{
+    background-color: var(--coklat);
+    top: 0;
+    position: relative;
+    transition: top ease 1s;
+    margin-bottom: 20px;
+}
+
+.peopleSay .card:hover{
+    top: -50px;
+}
+
+/* people Say Finsihed */
+
+/* footer started */
+footer{
+    background-color: var(--coklat);
+    padding: 50px;
+     position: relative;
+     color: var(--putih);
+     border-top: 2px solid var(--creamTebal);
+}
+
+footer h2{
+    font-weight: bold;
+}
+
+footer .gambar img{
+    border-left: 4px solid var(--cream);
+    border-bottom: 4px solid var(--cream);
+}
+
+footer h4{
+    font-family: var(--dancingFonts);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+footer p{
+    font-weight: 100;
+}
+
+footer ul li{
+    list-style-type: none;
+}
+
+footer ul li a{
+    color: var(--putih);
+    text-decoration: none;
+    border-bottom: 2px solid var(--putih);
+    line-height: 60px;
+    display: block;
+    transition: 1s ease all;
+}
+
+footer ul li a:hover{
+    background-color: var(--cream);
+    color: var(--coklat);
+}
+
+footer .btn-promo{
+    color: var(--coklat);
+    background-color: var(--cream);
+    display: block;
+    width: fit-content;
+    padding: 13px 26px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 1s ease all;
+    border: 1px solid var(--cream);
+    font-weight: bold;
+}
+
+footer .btn-promo:hover{
+    color: var(--cream);
+    background-color: transparent;
+}
+/* footer finished */
+
+/* HOME JQUERY EFFECT STARTED */
+
+/* header strated */
+header img{
+    opacity: 0;
+    transition: 1.5s ease all;
+    transform: translate(-150px,0);
+}
+
+header img.slideLeft{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+header .kanan{
+    opacity: 0;
+    transition: 1.5s ease all;
+    transform: translate(150px,0);
+}
+
+header .kanan.slideRight{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+/* header finished */
+
+/* intro started */
+
+.intro img{
+    opacity: 0;
+    transition: 1.5s ease all;
+    transform: translate(-150px,0);
+}
+
+.intro img.slide{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.intro .kanan{
+    opacity: 0;
+    transition: 1.5s ease all;
+    transform: translate(150px,0);
+}
+
+.intro .kanan.slideKanan{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+/* intro finished */
+
+/* produk terbaru started */
+.produkTerbaru .title{
+    opacity: 0;
+    transition: 1.5s ease all;
+    transform: translate(0,-150px);
+}
+
+.produkTerbaru .title.slideDown{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.produkTerbaru .card{
+    opacity: 0;
+    transition: 1.5s ease all;
+    transform: translate(0,-150px);
+}
+
+.produkTerbaru .card.slideDownCard{
+    opacity: 1;
+    transform: translate(0,0);
+}
+/* produk terbaru finished */
+
+
+/* promo sunthey coffe started */
+#diskon .kiri{
+    opacity: 0;
+    transition: 1.5s ease all;
+    transform: translate(-150px,0);
+}
+
+#diskon .kiri.slideLeftPromo{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+#diskon img{
+    opacity: 0;
+    transition: 1.5s ease all;
+    transform: translate(150px,0);
+}
+
+#diskon img.slideRightPromo{
+    opacity: 1;
+    transform: translate(0,0);
+}
+/* promo sunthey coffe finished */
+
+/* allmenu started */
+
+.allMenu .title{
+    opacity: 0;
+    transition: 1.5s ease all;
+    transform: translate(150px,0);
+}
+
+.allMenu .title.allMenuSlideDown{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.allPromoTitle h2{
+    color: var(--coklat);
+    font-weight: bold;
+    font-size: 3.5em;
+    font-family: var(--dancingFonts);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* allmenu finishied */
+
+/* HOME JQUERY EFFECT FINISHED */
+
+/* HOME STYLING FINISH */
+
+/* ABOUT STARTED */
+.aboutPlaces{
+    background-color: var(--cream);
+    color: var(--putih);
+    top: 10px;
+    padding: 6px 13px;
+    font-weight: bold;
+    padding: 50px;
+    color: var(--coklat);
+}
+
+.aboutPlaces .row{
+    align-items: center;
+}
+
+.aboutPlaces h1{
+    font-family:var(--dancingFonts);
+    font-weight: bold;
+    font-size: 70px;
+}
+
+.aboutPlaces strong{
+    background-color: var(--creamTebal);
+    padding: 5px 10px;
+    margin: 10px 0 20px 0;
+    font-family: var(--dancingFonts);
+    display: block;
+    width: fit-content;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 6px;
+    color: var(--coklat);
+    font-weight: 200;
+}
+
+.aboutPlaces p{
+    font-weight: 200;
+}
+
+.aboutPlaces #btnToGalery{
+    background-color: var(--coklat);
+    padding: 13px 26px;
+    color: var(--cream);
+    text-decoration: none;
+    border-radius: 6px;
+    display: block;
+    width: fit-content;
+    margin-top: 20px;
+    transition: 1s ease all ;
+    border: 1px solid var(--coklat);
+    font-weight: bold;
+}
+
+.aboutPlaces #btnToGalery:hover{
+    color: var(--coklat);
+    background-color: transparent;
+}
+
+.aboutPlaces img{
+    border-left: 4px solid var(--coklat);
+    border-bottom: 4px solid var(--coklat);
+}
+
+/* about places finished */
+
+/* karyawan started */
+.aboutKaryawan{
+    background-color: var(--coklat);
+    top: 10px;
+    padding: 6px 13px;
+    font-weight: bold;
+    padding: 50px;
+    color: var(--putih);
+}
+
+.aboutKaryawan img{
+    border-right: 4px solid var(--cream);
+    border-bottom: 4px solid var(--cream);
+}
+
+.aboutKaryawan .row{
+    align-items: center;
+}
+
+.aboutKaryawan h1{
+    font-family:var(--dancingFonts);
+    font-weight: bold;
+    font-size: 70px;
+}
+
+.aboutKaryawan strong{
+    background-color: var(--creamTebal);
+    padding: 5px 10px;
+    margin: 10px 0 20px 0;
+    font-family: var(--dancingFonts);
+    display: block;
+    width: fit-content;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 6px;
+    color: var(--coklat);
+    font-weight: 200;
+}
+
+.aboutKaryawan p{
+    font-weight: 200;
+}
+
+.aboutKaryawan #btnToGalery{
+    background-color: var(--cream);
+    padding: 13px 26px;
+    color: var(--coklat);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    display: block;
+    width: fit-content;
+    margin-top: 20px;
+    transition: 1s ease all ;
+    border: 1px solid var(--cream);
+}
+
+.aboutKaryawan #btnToGalery:hover{
+    color: var(--cream);
+    background-color: transparent;
+}
+
+/* karyawan finished*/
+
+
+
+/* jquery About Started */
+.aboutPlaces img{
+    opacity: 0;
+    transform: translate(-150px,0);
+    transition: 1s ease all;
+}
+.aboutPlaces img.active{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.aboutPlaces .kanan{
+    opacity: 0;
+    transform: translate(150px,0);
+    transition: 1s ease all;
+}
+.aboutPlaces .kanan.active2{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.aboutKaryawan img{
+    opacity: 0;
+    transform: translate(150px,0);
+    transition: 1s ease all;
+}
+
+.aboutKaryawan img.active3{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.aboutKaryawan .kanan{
+    opacity: 0;
+    transform: translate(-150px,0);
+    transition: 1s ease all;
+}
+.aboutKaryawan .kanan.active4{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+#menuTop img{
+    opacity: 0;
+    transform: translate(-150px,0);
+    transition: 1s ease all;
+}
+#menuTop img.active5{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+#menuTop .kanan{
+    opacity: 0;
+    transform: translate(150px,0);
+    transition: 1s ease all;
+}
+#menuTop .kanan.active6{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+
+/* jquery About Finsihed */
+/* ABOUT FINISHED */
+
+
+/* CONTACT STARTED */
+.contactUs{
+    background-color: var(--cream);
+    padding: 50px;
+    color: var(--coklat);
+}
+
+.contactUs h1{
+    font-weight: bold;
+    color: var(--coklat);
+    font-family: var(--dancingFonts);
+    font-size: 60px;
+}
+
+.contactUs img {
+    margin-top: 25px;
+    border-left: 3px solid var(--coklat);
+    border-bottom: 3px solid var(--coklat);
+    
+}
+
+.contactUs a{
+    text-decoration: none;
+    background-color: var(--coklat);
+    padding: 5px 10px;
+    display: block;
+    width: fit-content;
+    border-radius: 5px;
+    color: var(--cream);
+    font-weight: bold;
+    transition: 1s ease all;
+    border: 1px solid var(--coklat);
+    margin-top: 20px;
+}
+
+.contactUs a:hover{
+   background-color: transparent;
+   color: var(--coklat);
+}
+
+.contactUs i{
+    margin-right: 5px;
+}
+
+
+/* CONTACT FINSIHED */
+
+
+
+
+/* Galery Started */
+    .galery{
+        background-color: var(--cream);
+        padding: 50px;
+    }
+
+    .galery h1{
+        font-family: var(--dancingFonts);
+        font-weight: bold;
+        font-size: 50px;
+        text-align: center;
+        color: var(--coklat);
+        margin-bottom: 30px;
+    }
+
+    .galery img{
+        border: 2px solid var(--coklat);
+        transition: 1s ease all;
+        overflow: hidden;
+    }
+
+    .galery img:hover{
+        transform: scale(0.9);
+        cursor: pointer;
+    }
+/* Galery Finished */
+
+
+/* Blogs Started */
+.blogs{
+    padding: 50px;
+    background-color: var(--cream);
+    color: var(--putih);
+}
+
+
+.blogs .title h1{
+    font-weight: bold;
+    color: var(--coklat);
+    font-size: 50px;
+    font-family: var(--dancingFonts);
+}
+
+.blogs .title p{
+    width: 50%;
+    margin: 10px auto 60px;
+    color: var(--coklat);
+}
+
+.blogs .atas img{
+    height: 450px;
+    object-fit: cover;
+    transition: 1s ease all;
+}
+
+.blogs .card:hover img{
+    transform: scale(1.1);
+}
+
+.blogs p{
+    font-weight: 100;
+}
+
+.blogs h5{
+    font-size: 2em;
+}
+
+.blogs .card{
+    overflow: hidden;
+    position: relative;
+    background-color: var(--coklat);
+}
+.blogs .category{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--cream);
+    border-radius: 5px;
+    padding: 5px;
+    color: var(--coklat);
+    z-index: 9;
+    font-weight: bold;
+}
+
+.blogs span{
+    background-color: var(--cream);
+    color:var(--coklat);
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.blogs .btn{
+    background-color: var(--cream);
+    border: none;
+    outline: none;
+    color: var(--coklat);
+    border: 1px solid var(--cream);
+    font-weight: bold;
+    transition: 1s ease all;
+}
+.blogs .btn:hover{
+    background-color: transparent;
+}
+
+.detailBlogs{
+    background-color: var(--coklat);
+    padding: 50px;
+    color: var(--putih);
+}
+
+.detailBlogs .container{
+    margin-top: 50px;
+}
+
+.detailBlogs .deskripsi div{
+    font-weight: 100;
+}
+
+.detailBlogs .btnKomentar{
+    background-color: var(--cream);
+    outline: none; 
+    border: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 1s ease all;
+    border: 1px solid var(--cream);
+}
+
+.detailBlogs .btnKomentar:hover{
+    background-color: transparent;
+    color: var(--cream);
+}
+
+.detailBlogs img{
+    margin: 20px 0;
+    border-left: 2px solid var(--putih);
+    border-bottom: 2px solid var(--putih);
+}
+
+.detailBlogs .allKomentar{
+    height: 500px;
+    overflow: scroll;
+    margin: 30px 0;
+}
+
+
+.detailBlogs .loping{
+    margin-top: 10px;
+    background-color: var(--cream);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.detailBlogs strong{
+    font-size: 1.5em;
+}
+
+/* Blogs Finished */
+
+
+/* Categories Started */
+.category{
+    background-color: var(--coklat);
+    padding: 50px;
+
+}
+
+.category .title{
+    margin-top: 50px;
+    color: var(--putih);
+    font-weight: bold;
+    text-shadow: 2px 3px 2px rgba(0,0,0,.2);
+}
+
+.category .image{
+    position: relative;
+}
+
+.category .floatingCategory{
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    background-color: var(--coklat);
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--creamTebal);
+    font-weight: bold;
+    text-shadow: 0px 1px 4px rgba(0,0,0,.2);
+}
+
+.category img{
+    height: 250px;
+    margin-top: 30px ;
+    background-color: var(--cream);
+    padding: 10px;
+}
+
+/* Categories Finished */
+
+
+
+@media screen and (max-width:767px){
+
+    /* HOME SATRTED */
+
+    /* Navbar styling */
+    .navbar ul li .active{
+        width: fit-content;
+        padding: 5px 10px;
+    }
+
+    .navbar .bell{
+        margin: 10px 0;
+    }
+    /* Navbar finished */
+
+    /* header started */
+
+    header{
+        background-image: url('/images/bg.png');
+        height: 140vh;
+    }
+    header .container img{
+        width: 80%;
+        margin-top: 70px;
+    }
+
+    header .row h1{
+        font-size: 90px;
+    }
+
+    /* header finsihed */
+
+    /* intro started */
+
+    .intro{
+        text-align: center;
+    }
+
+    .intro .kiri{
+        order: 2;
+    }
+
+    .intro img{
+        order: 1;
+        margin-bottom: 20px;
+    }
+    .intro .kanan{
+        margin: 20px auto;
+    }
+
+    .intro strong{
+        margin: 10px auto;
+    }
+
+    .intro a{
+        margin: 0 auto;
+    }
+    
+    /* intro finished */
+
+    /* produk terbaru started */
+    .produkTerbaru .atas{
+        margin: 20px auto;
+        color: var(--creamTebal);
+        font-weight: 200;
+        width: 100%;
+    }
+
+    .produkTerbaru h1{
+        font-size: 40px;
+    }
+
+    /* produk terbaru finished */
+
+    .allMenu .atas{
+        width: 100%;
+    }
+
+    /* HOME FINISHED */
+    
+    /* ABOUT STARTED */
+    .aboutPlaces h1{
+        font-size: 40px;
+        margin: 10px 0;
+    }
+    /* ABOUT FINISHED */
+
+    .aboutKaryawan h1{
+        font-size: 40px;
+        margin: 10px 0;
+    }
+
+    .aboutKaryawan img{
+        order: 1;
+    }
+
+    .aboutKaryawan .kanan{
+        order: 2;
+    }
+    
+}
+
+@media screen and (max-width:567px){
+
+    /* header started */
+    header{
+        background-image: url('/images/bg.png');
+        height: 130vh;
+    }
+    header .container img{
+        width: 80%;
+        margin-top: 70px;
+    }
+
+    header .row h1{
+        font-size: 60px;
+    }
+
+    header h5{
+        font-size: 0.9em;
+    }
+
+    /* header finished */
+    
+}
+
+
+
+html{
+    scroll-behavior: smooth;
+}

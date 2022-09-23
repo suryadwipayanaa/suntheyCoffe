@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--libraFonts);
+}
+
+:root{
+    --coklat : #57433c;
+    --cream : #bb9076;
+    --creamTebal : #e5cdaa;
+    --putih : #fff;
+    --hitam : #000;
+
+    --dancingFonts : 'Dancing Script', cursive;
+    --libraFonts :'Libre Franklin', sans-serif;
+}
+
+.login {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.login .background{
+    background-color: var(--cream);
+    width: 45%;
+    height: 100vh;
+}   
+
+.login img{
+    border-right: 3px solid var(--cream);
+    border-bottom: 3px solid var(--cream);
+}
+
+.login .row{
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.login .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.login span{
+    color: var(--cream);
+    font-weight: bold;
+}
+
+.login h1{
+    text-align: center;
+    margin: 30px 0;
+    font-weight: 300;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.login .btnLogin{
+    background-color: var(--cream);
+    color: var(--putih);
+    font-weight: bold;
+    margin: 20px auto;
+    transition: 1s ease all;
+    font-size: 1.5em;
+}
+
+.login p{
+    color: var(--putih);
+    font-style: italic;
+}
+
+.login strong{
+    font-weight: 200;
+}
+
+.login a{
+    text-decoration: none;
+    color: var(--cream);
+    font-weight: 400;
+    font-style: italic;
+}
+
+.login .bi-person-fill{
+    position: absolute;
+    right: 0;
+    background-color: var(--cream);
+    padding: 13px;
+    font-size: 2em;
+    top: 0;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.login .bi-key-fill{
+    position: absolute;
+    right: 0;
+    background-color: var(--cream);
+    padding: 13px;
+    font-size: 2em;
+    top: 0;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+@media screen and (max-width:767px){
+    
+    .login .background{
+     background-color: transparent;
+        width: 10%;
+        height: fit-content;
+    }   
+
+    .login .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 40px;
+    }
+    
+}
